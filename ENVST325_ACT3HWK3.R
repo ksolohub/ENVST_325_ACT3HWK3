@@ -38,7 +38,6 @@ ggplot(data=datTemp[datTemp$Entity != "World",]
 
 
 #Prompt 2
-
 NorthA <- datCO2[datCO2$Entity == "United States" |
                    datCO2$Entity == "Canada" |
                    datCO2$Entity == "Mexico", ]
@@ -49,6 +48,9 @@ ggplot(data = NorthA,
   geom_line()+ 
   labs(x="Year", y="US fossil fuel emissions (tons CO2)")+
   theme_classic()
+
+
+
 
 
 
@@ -77,6 +79,10 @@ ggplot(data = Mycountries,
 
 
 
+
+
+
+
 #Question 2
 
 ggplot(data=datTemp[datTemp$Entity == "World",]
@@ -96,7 +102,12 @@ ggplot(data=datCO2[datCO2$Entity == "World",]
 
 
 
+
+
+
+
 #Question 3
+#Books
 Books.Pub <- read.csv("/cloud/project/number-of-published-titles.csv")
 
 colnames(Books.Pub)[4] <- "NumberPub"
@@ -110,6 +121,12 @@ ggplot(data = Books.Pub,
   theme_classic()
 
 
+
+
+
+
+
+#Pollution
 Outdoor.Death <- read.csv("/cloud/project/outdoor-pollution-death-rate.csv")
 
 colnames(Outdoor.Death)[4] <- "Deaths"
